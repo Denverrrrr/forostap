@@ -1,11 +1,17 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 
 import Header from '../header';
+import Featured from '../featured';
+
+import './app.scss';
+
 
 const App = () => {
     return (
-      <Header/>
+      <main role='main' className='container'>
+        <Header/>
+        <Featured/>
+      </main>
     );
 }
 
