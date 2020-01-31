@@ -1,6 +1,7 @@
 .featured-container{
   max-width: 984px;
   margin: 0 auto;
+  padding: 42px 0 68px;
 }
 
 span.title{
@@ -10,9 +11,10 @@ span.title{
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   letter-spacing: .3rem;
+  padding: 0 0 16px;
 }
 
-.items-grid{
+.small-items-wrapper{
   max-width: 984px;
   margin-left: auto;
   margin-right: auto;
@@ -21,5 +23,5 @@ span.title{
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 40px;
   grid-row-gap: 48px;
-  padding: 20px 0 30px 0;
+  padding: 0 0 48px 0;
 };
