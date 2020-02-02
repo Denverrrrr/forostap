@@ -2,7 +2,8 @@ import React from "react";
 
 import "./big-featured-item.scss";
 
-const BigFeaturedItem = () => {
+const BigFeaturedItem = ({item}) => {
+  
   return (
     <div className="big-item-card">
       <div

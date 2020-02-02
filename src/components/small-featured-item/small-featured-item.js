@@ -2,21 +2,20 @@ import React from 'react';
 
 import './small-featured-item.scss'
 
-const SmallFeaturedItem = () => {
-
+const SmallFeaturedItem = ({ item, nameToStyles }) => {
+  const { title, description, backgroundImage } = item;
 
   return (
-    <div className="small-item-card">
+    <div className={`${nameToStyles}-item-card`}>
       <div
-        className="small-img-container"
+        className={`${nameToStyles}-img-container`}
         style={{
-          backgroundImage:
-            "url(https://www.sciencealert.com/images/2019-12/processed/CatsHaveFacialExpressionsButHardToRead_600.jpg)"
+          backgroundImage: `url(${backgroundImage})`
         }}
       ></div>
-      <div className="small-item-description">
-        <h3>Lorem, ipsum.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <div className={`${nameToStyles}-item-description`}>
+        <h3>{title}</h3>
+        <p>{description}</p>
       </div>
     </div>
   );
