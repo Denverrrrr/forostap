@@ -4,7 +4,7 @@ import './featured-items.scss';
 
 const FeaturedItem = ({ item, nameToStyles }) => {
 
-  const { title, description, backgroundImage } = item;
+  const { title, description, backgroundImage, ariaLabelledby, emoji } = item;
 
   return (
     <div className={`${nameToStyles}-item-card`}>
@@ -20,8 +20,11 @@ const FeaturedItem = ({ item, nameToStyles }) => {
         <p>{description}</p>
       </div>
       <p className="appearedImgContainer">
-        <span role="img" aria-labelledby="laptop emoji" className="appearedImg">
-          💸
+        <span
+          role="img"
+          aria-labelledby={ariaLabelledby}
+          className="appearedImg">
+          {emoji}
         </span>
       </p>
     </div>

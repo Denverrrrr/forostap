@@ -18,5 +18,13 @@ const featuredItemsError = (error) => {
   };
 };
 
+const fetchFeaturedItems = (givebatService, dispatch) => () => {
+  dispatch(featuredItemsRequested());
+  givebatService
+    .getFeaturedItems()
+    .then(data => dispatch(featuredItemsLoaded(data)))
+    .catch(err => dispatch(featuredItemsError(err)));
+};
 
-export { featuredItemsRequested, featuredItemsLoaded, featuredItemsError };
+
+export { fetchFeaturedItems };

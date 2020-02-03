@@ -6,6 +6,8 @@ export default class GivebatService {
     title: 'Changelog',
     description: 'News and podcasts for developers',
     backgroundImage: 'https://givebat.com/images/featured/body_changelog_2.png',
+    ariaLabelledby: 'laptop emoji',
+    emoji:'💻',
     },
     
     {
@@ -13,6 +15,8 @@ export default class GivebatService {
     title: 'Indizr',
     description: 'Everything Web 3.0',
     backgroundImage: 'https://givebat.com/images/featured/body_changelog_2.png',
+    ariaLabelledby: 'web emoji',
+    emoji:'🕸',
     },
 
     {
@@ -20,6 +24,8 @@ export default class GivebatService {
     title: 'Crypto Companions',
     description: 'The Basic Attention Token is one of the most exciting, innovative, and widely adopted projects in the entire crypto / blockchain space.',
     backgroundImage: 'https://givebat.com/images/collections/hero_crypto_companions.jpg',
+    ariaLabelledby: 'money with wings emoji',
+    emoji:'💸',
     },
   ];
 
