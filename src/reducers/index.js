@@ -20,12 +20,10 @@ const initialState = {
       id: 3,
       title: "Crypto Companions",
       description:
-        "The Basic Attention Token is one of the most exciting, innovative, and widely adopted projects in the entire crypto / blockchain space.",
+        "The brave crypto companies and creators driving the world of crypto forward",
       backgroundImage:
         "https://givebat.com/images/collections/hero_crypto_companions.jpg"
-    },
-
-    
+    }
   ],
   loading: true,
   error: null

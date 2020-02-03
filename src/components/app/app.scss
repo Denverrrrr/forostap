@@ -37,8 +37,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 /////////////////////////
 
-body{
-	
+.container{
 	margin: 0 auto;
-	padding: 115px 0;
+	background:linear-gradient(to bottom, rgb(214, 226, 255) , white 20%,white 80%, rgb(250, 216, 231) );
 }

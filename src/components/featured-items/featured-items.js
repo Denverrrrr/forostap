@@ -1,8 +1,9 @@
 import React from 'react';
 
-import './small-featured-item.scss'
+import './featured-items.scss';
 
-const SmallFeaturedItem = ({ item, nameToStyles }) => {
+const FeaturedItem = ({ item, nameToStyles }) => {
+
   const { title, description, backgroundImage } = item;
 
   return (
@@ -14,11 +15,17 @@ const SmallFeaturedItem = ({ item, nameToStyles }) => {
         }}
       ></div>
       <div className={`${nameToStyles}-item-description`}>
+        <span>Collection</span>
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
+      <p className="appearedImgContainer">
+        <span role="img" aria-labelledby="laptop emoji" className="appearedImg">
+          💸
+        </span>
+      </p>
     </div>
   );
 };
 
-export default SmallFeaturedItem;
+export default FeaturedItem;

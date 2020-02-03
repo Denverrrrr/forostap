@@ -11,9 +11,10 @@ import './app.scss';
 const App = ({givebatService}) => {
     console.log(givebatService.getFeaturedItems());
     return (
-      <main role='main' className='container'>
-        <Header/>
-        <Featured/>
+      <main role="main" className="container">
+      <Header />
+        <Featured />
+        <Featured />
       </main>
     );
 }

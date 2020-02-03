@@ -1,11 +1,11 @@
 import React, {Component, Fragment} from 'react';
-import SmallFeaturedItem from '../small-featured-item';
+import FeaturedItems from '../featured-items';
 
 import { connect } from 'react-redux';
 
 import './featured.scss'
 
-class Featured extends Component {
+class FeaturedContainer extends Component {
 
   render() {
     const {featuredItems} = this.props;
@@ -21,7 +21,7 @@ class Featured extends Component {
           {
             featuredItems.map((item)=>{
               return (
-                <SmallFeaturedItem
+                <FeaturedItems
                   item={item}
                   key={item.id}
                   nameToStyles={smallItemsClass}
@@ -36,13 +36,13 @@ class Featured extends Component {
           <Fragment>
             <div className="small-items-wrapper">
               {
-              featuredItems.map(item => {
-                if (featuredItems.indexOf(item) === featuredItems.length - 1) {
+              featuredItems.map((item, index) => {
+                if (index === featuredItems.length - 1) {
                   return null;
                 }
 
                 return (
-                  <SmallFeaturedItem
+                  <FeaturedItems
                     item={item}
                     key={item.id}
                     nameToStyles={smallItemsClass}
@@ -52,18 +52,15 @@ class Featured extends Component {
             }
             </div>
 
-            <div>
-              <SmallFeaturedItem
+              <FeaturedItems
                 item={featuredItems[featuredItems.length - 1]}
                 key={featuredItems[featuredItems.length - 1].id}
                 nameToStyles={(bigItemClass)}
               />
-            </div>
           </Fragment>
         );
       }
     };
-
 
     return (
       <div className="featured-container">
