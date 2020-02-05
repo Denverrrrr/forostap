@@ -38,6 +38,17 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /////////////////////////
 
 .container{
-	margin: 0 auto;
 	background:linear-gradient(to bottom, rgb(214, 226, 255) , white 20%,white 80%, rgb(250, 216, 231) );
+		.wrapper{
+			width: 984px;
+			margin: 0 auto;
+		}
+		
+		.references-block-wrapper{
+			background-color: #F2F2F2;
+			height: 1000px;
+		}
 }
+
+
+

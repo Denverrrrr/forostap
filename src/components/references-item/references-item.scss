@@ -1,0 +1,42 @@
+.references-item{
+  display: flex;
+  flex-direction: row;
+  width: 472px;
+  height: 180px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border-radius: 48px;
+
+  span{
+    display: block;
+    min-height: 148px;
+    min-width: 148px;
+    width: 148px;
+    background-image: url(https://givebat.com/images/thumbnails/theguardian.com.jpg);
+    background-size: cover;
+    border-radius: 34px;
+    margin: 16px 0px 16px 16px;
+    background-position: center center;
+  }
+    .references-description{
+        h3,p,img{
+        display: block;
+      }
+      h3{
+        padding: 24px 24px 4px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: grey;
+      }
+      p{
+        font-size: 1.3rem;
+        padding: 0 24px 4px;
+      }
+    }
+    
+}
+p{
+  display: block;
+}
