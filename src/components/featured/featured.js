@@ -20,18 +20,18 @@ class FeaturedContainer extends Component {
   render() {
     const { featuredItems, loading, error, heading = null } = this.props;
 
-    if (loading) {
-      return <Spinner />;
-    }
+    const hasData = !(loading || error);
 
-    if (error) {
-      return <ErrorIndicator />;
-    }
+    const errorMessage = error ? <ErrorIndicator /> : null;
+    const spinner = loading ? <Spinner /> : null;
+    const content = hasData ? <Featured featuredItems={featuredItems} /> : null;
 
     return (
       <div className="featured-container">
         <span className="title">{heading}</span>
-        <Featured featuredItems={featuredItems} />
+        {errorMessage}
+        {spinner}
+        {content}
       </div>
     );
   }

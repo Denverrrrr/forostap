@@ -3,7 +3,11 @@ import React from 'react';
 import './spinner.scss';
 
 const Spinner = () => {
-  return <div>loading...</div>;
+  return (
+    <div className="lds-circle">
+      <div></div>
+    </div>
+  );
 };
 
 export default Spinner;

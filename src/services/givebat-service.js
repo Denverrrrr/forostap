@@ -14,7 +14,7 @@ export default class GivebatService {
     id: 2,
     title: 'Indizr',
     description: 'Everything Web 3.0',
-    backgroundImage: 'https://givebat.com/images/featured/body_changelog_2.png',
+    backgroundImage: 'https://givebat.com/images/featured/hero_indizr2.jpg',
     ariaLabelledby: 'web emoji',
     emoji:'🕸',
     },
