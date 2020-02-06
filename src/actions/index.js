@@ -45,12 +45,6 @@ const referencesFilter = btnName => {
   };
 };
 
-const referencesDidMount =()=>{
-  return{
-    type: 'REFERENCES_DID_MOUNT',
-  }
-}
-
 const fetchFeaturedItems = (givebatService, dispatch) => () => {
   dispatch(featuredItemsRequested());
   givebatService
@@ -72,5 +66,4 @@ export {
   fetchFeaturedItems,
   referencesFilter,
   fetchReferencesItems,
-  referencesDidMount
 };

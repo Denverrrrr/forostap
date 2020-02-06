@@ -7,7 +7,6 @@ const initialState = {
   referencesFilterCriterion: 'news',
   referencesFilter:[],
 };
-console.log(initialState.referencesFilterCriterion);
 
 const reducer = (state = initialState, action) => {
 
@@ -45,9 +44,13 @@ const reducer = (state = initialState, action) => {
       };
 
     case "FETCH_REFERENCES_ITEMS_SUCCESS":
+      const initRefItems = action.payload.filter(item =>
+        item.type.includes(state.referencesFilterCriterion)
+      );
       return {
         ...state,
         referencesItems: action.payload,
+        referencesFilter: initRefItems,
         loading: false,
         error: null
       };
@@ -60,20 +63,11 @@ const reducer = (state = initialState, action) => {
         error: action.payload
       };
 
-    case "REFERENCES_DID_MOUNT":
-      const initFiltered = state.referencesItems.filter(
-        item => item.type === state.referencesFilterCriterion
-      );
-
-      return {
-        ...state,
-        referencesFilter: initFiltered
-      };
 
     case "FILTER_REFERENCES":
       const criterion = action.payload;
-      const filtered = state.referencesItems.filter(
-        item => item.type === criterion
+      const filtered = state.referencesItems.filter( item =>
+        item.type.includes(criterion)
       );
 
       return {

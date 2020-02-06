@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from "react";
+import React, { Component } from "react";
 
 import {connect} from 'react-redux'; 
 
@@ -6,7 +6,7 @@ import ReferencesBlockNavbar from '../references-block-navbar';
 import ReferencesItem from '../references-item';
 import {withService} from '../hoc';
 
-import { fetchReferencesItems, referencesDidMount } from "../../actions";
+import { fetchReferencesItems } from "../../actions";
 
 import './references-block.scss';
 
@@ -14,20 +14,19 @@ class ReferencesBlock extends Component {
 
   componentDidMount(){
     this.props.fetchReferencesItems();
-    this.props.toFilter();
   }
 
   render() {
     const { items /* loading, error */ } = this.props;
     return (
-      <Fragment>
+      <div className="references-block-wrapper">
         <ReferencesBlockNavbar />
         <div className="references-items-container">
           {items.map(item => {
             return <ReferencesItem item={item} key={item.id} />;
           })}
         </div>
-      </Fragment>
+      </div>
     );
   }
 }
@@ -47,7 +46,6 @@ const mapDispatchToProps = (
 ) => {
   return {
     fetchReferencesItems: fetchReferencesItems(givebatService, dispatch),
-    toFilter: referencesDidMount
   };
 };
 

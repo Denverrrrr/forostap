@@ -18,7 +18,7 @@ class FeaturedContainer extends Component {
   }
 
   render() {
-    const { featuredItems, loading, error } = this.props;
+    const { featuredItems, loading, error, heading = null } = this.props;
 
     if (loading) {
       return <Spinner />;
@@ -30,7 +30,7 @@ class FeaturedContainer extends Component {
 
     return (
       <div className="featured-container">
-        <span className="title">Featured</span>
+        <span className="title">{heading}</span>
         <Featured featuredItems={featuredItems} />
       </div>
     );
@@ -57,13 +57,13 @@ const Featured = ({ featuredItems }) => {
     );
   } else {
     return (
+
       <Fragment>
         <div className="small-items-wrapper">
           {featuredItems.map((item, index) => {
             if (index === featuredItems.length - 1) {
               return null;
             }
-
             return (
               <FeaturedItems
                 item={item}
@@ -73,6 +73,7 @@ const Featured = ({ featuredItems }) => {
             );
           })}
         </div>
+
         <FeaturedItems
           item={featuredItems[featuredItems.length - 1]}
           key={featuredItems[featuredItems.length - 1].id}

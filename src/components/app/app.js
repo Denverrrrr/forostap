@@ -1,28 +1,26 @@
 import React from 'react';
 
-import { withService } from "../hoc";
+import {Route} from 'react-router-dom';
 
-import Header from '../header';
-import Featured from '../featured';
-import ReferencesBlock from '../references-block';
+import {
+  HomePage,
+  CryptoCompanionsPage,
+  ChangelogPage,
+  IndizrPage
+} from "../pages";
 
 import './app.scss';
 
 
-const App = ({givebatService}) => {
-    console.log(givebatService.getFeaturedItems());
+const App = () => {
     return (
-      <main role="main" className="container">
-        {/* <div className='wrapper'> */}
-          <Header />
-          <Featured />
-        {/* </div> */}
-        <div className="references-block-wrapper">
-          <ReferencesBlock />
-        </div>
-          <Featured />
+      <main role="main">
+        <Route path="/" component={HomePage} exact />
+        <Route path="/crypto-companions" component={CryptoCompanionsPage} />
+        <Route path="/changelog" component={ChangelogPage} />
+        <Route path="/indizr" component={IndizrPage} />
       </main>
     );
 }
 
-export default withService()(App);
+export default App;

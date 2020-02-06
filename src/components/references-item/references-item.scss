@@ -9,7 +9,16 @@
   font-weight: bold;
   border-radius: 48px;
 
-  span{
+      &:hover{
+        border-radius: 48px;
+        box-shadow: 0 0 0 4px red;
+      }
+
+      &:hover .references-description .to-visit{
+        visibility: visible;
+      }
+
+  .references-img{
     display: block;
     min-height: 148px;
     min-width: 148px;
@@ -21,22 +30,37 @@
     background-position: center center;
   }
     .references-description{
+
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto;
+      padding: 24px;
+
         h3,p,img{
         display: block;
-      }
-      h3{
-        padding: 24px 24px 4px;
         font-size: 1.3rem;
-        font-weight: bold;
-        color: grey;
-      }
-      p{
-        font-size: 1.3rem;
-        padding: 0 24px 4px;
-      }
-    }
+        }
+
+        h3{
+          padding: 0 0 4px;
+          font-weight: bold;
+          color: grey;
+        }
+
+        .to-visit{
+          display: flex;
+          visibility: hidden;
+          color: red;
+          align-self: flex-end;
+        }
+
+        .to-visit-img{
+          align-self: center;
+          margin-left: 10px;
+          height: 14px;
+          width: 14px;
+          background-image: url(https://givebat.com/images/page-elements/icon_new_window.svg);
+        }
     
-}
-p{
-  display: block;
+  }
 }
